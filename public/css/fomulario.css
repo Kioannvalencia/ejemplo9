@@ -1,0 +1,105 @@
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('https://cdn1.intriper.com/wp-content/uploads/2020/03/25144240/Cuentas-de-Instagram-para-encontrar-los-mejores-wallpapers-de-viajes.png') no-repeat center center fixed;
+        background-size: cover;
+        color: #141414;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h1, h2 {
+        text-align: center;
+        color: #0e0d0d;
+    }
+    .form-container, .popular-destinations {
+        background: rgba(252, 248, 248, 0.877); /* Fondo blanco semi-transparente */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+    .date-group {
+        display: flex;
+        gap: 10px; /* Espacio entre los campos de fecha */
+    }
+    .date-group .form-group {
+        flex: 1; /* Hace que ambos campos de fecha ocupen el mismo espacio */
+    }
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    .popular-destinations {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .destination {
+        background: #eee;
+        border-radius: 8px;
+        overflow: hidden;
+        width: calc(33.333% - 20px);
+        transition: transform 0.3s ease;
+    }
+    .destination:hover {
+        transform: scale(1.05);
+    }
+    .destination img {
+        width: 100%;
+        height: auto;
+    }
+    .destination-info {
+        padding: 15px;
+    }
+    .destination-info h3 {
+        margin: 0;
+        color: #333;
+    }
+    .destination-info p {
+        margin: 5px 0;
+        color: #555;
+    }
+    @media (max-width: 768px) {
+        .destination {
+            width: calc(50% - 20px);
+        }
+    }
+    @media (max-width: 480px) {
+        .destination {
+            width: 100%;
+        }
+    }

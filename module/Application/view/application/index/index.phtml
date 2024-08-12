@@ -1,0 +1,98 @@
+<?php
+$formulario=$this->miFormulario;
+/*var_dump($formulario); die();*/
+$formulario->prepare();
+?>
+
+<div class="container">
+        <div class="form-container">
+            <h1>Planifica tu Viaje</h1>
+            <div class="form-container"><h2>Viajes Más Populares</h2></div>
+        <div class="popular-destinations">
+            
+            <div class="destination">
+                <img src="https://cdn2.civitatis.com/francia/paris/galeria/torre-eiffel-altura.jpg" alt="París">
+                <div class="destination-info">
+                    <h3>París</h3>
+                    <p>La ciudad del amor y la luz.</p>
+                </div>
+            </div>
+            <div class="destination">
+                <img src="https://media.admagazine.com/photos/618a5ef1be961b98e9f09804/master/w_1280,c_limit/91686.jpg" alt="Tokio">
+                <div class="destination-info">
+                    <h3>Tokio</h3>
+                    <p>La vibrante capital de Japón.</p>
+                </div>
+            </div>
+            <div class="destination">
+                <img src="https://media.staticontent.com/media/pictures/bfb80462-7604-4711-8bfb-576e01508817" alt="Nueva York">
+                <div class="destination-info">
+                    <h3>Nueva York</h3>
+                    <p>La ciudad que nunca duerme.</p>
+                </div>
+            </div>
+        </div>
+            
+            <?php
+            //inicio form
+            echo $this->form()->openTag($formulario);   
+            ?>
+                <!-- Información Personal -->
+                <div class="form-group">
+                    <?php
+                    echo $this->formLabel($formulario->get('nombre'));
+                    echo $this->formElement($formulario->get('nombre'));
+                    echo $this->formElementErrors($formulario->get('nombre'));
+                    ?>
+                </div>
+                <div class="form-group">
+                    <?php
+                    echo $this->formLabel($formulario->get('correo'));
+                    echo $this->formElement($formulario->get('correo'));
+                    echo $this->formElementErrors($formulario->get('correo'));
+                    ?>
+                </div>
+
+                <div class="form-group">
+                    <?php
+                    echo $this->formLabel($formulario->get('destino'));
+                    echo $this->formElement($formulario->get('destino'));
+                    echo $this->formElementErrors($formulario->get('destino'));
+                    ?>
+                </div>
+
+                <div class="date-group">
+                    <div class="form-group">
+                            <?php
+                            echo $this->formLabel($formulario->get('fecha_salida'));
+                            echo $this->formElement($formulario->get('fecha_salida'));
+                            echo $this->formElementErrors($formulario->get('fecha_salida'));
+                            ?>
+                    </div>
+                    <div class="form-group">
+                            <?php
+                            echo $this->formLabel($formulario->get('fecha_regreso'));
+                            echo $this->formElement($formulario->get('fecha_regreso'));
+                            echo $this->formElementErrors($formulario->get('fecha_regreso'));
+                            ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php
+                     echo $this->formLabel($formulario->get('preferencias'));
+                     echo $this->formElement($formulario->get('preferencias'));
+                     echo $this->formElementErrors($formulario->get('preferencias'));
+                     ?>
+                </div>
+
+                <button type="submit">Enviar</button>
+            <?php
+            //cierre form
+            echo $this->form()->closeTag();   
+            ?>
+        </div>
+
+       
+    </div>
+
+    
